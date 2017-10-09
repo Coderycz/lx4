@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>登录注册</title>
+    <script src="bootstrap/jquery-1.7.2.js"></script>
+    <link rel="stylesheet" href="bootstrap/bootstrap.min.css">
+
+    <script src="bootstrap/bootstrap.js"></script>
+    <link rel="stylesheet" href="css/same.css">
+    <link rel="stylesheet" href="css/login.css">
+
+    <script src="js/date.js"></script>
+    <script src="js/login.js"></script>
+
+</head>
+
+<body>
+    <header>
+        <div class="min container">
+            <div class="logo"><img src="img/logo.jpg" height="50px" alt=""></div>
+            <!-- <div class="login text-center ">
+                <span>登录</span>
+                <span>注册</span>
+            </div> -->
+        </div>
+
+    </header>
+    <div class="flex">
+        <div class="contai">
+            <div class="logtop container">
+                <div class="active logint col-lg-6 col-md-6 col-sm-6 col-xs-6 text-center ">登录</div>
+                <div class=" zhucet col-lg-6 col-md-6 col-sm-6 col-xs-6 text-center">注册</div>
+            </div>
+            <div class="login">
+                <form class="form-horizontal" role="form">
+                    <div class="form-group">
+                        <label for="name" class="use3 control-label">用户名</label>
+                        <div class=" use9">
+                            <input type="text" id="name" class="form-control" placeholder="请输入用户名">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="psw" class="use3 control-label">密码</label>
+                        <div class=" use9">
+                            <input type="password" id="psw" class="form-control" placeholder="请输入密码">
+                        </div>
+                    </div>
+                    <!--    <div class="sub">tijiao</div> -->
+                    <div class="submit form-control form-danger">登录</div>
+                </form>
+                <div class="text-right right-bot">
+                    <span><a href="">忘记密码</a></span>
+                    <span><a href="">注册新用户</a></span>
+                </div>
+            </div>
+            <div class="zhuce">
+                <form class="form-horizontal" role="form">
+                    <div class="form-group">
+                        <label for="name" class="use3 control-label">用户名</label>
+                        <div class=" use9">
+                            <input type="text" id="name" class="form-control" placeholder="请输入用户名">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="psw" class="use3 control-label">密码</label>
+                        <div class=" use9">
+                            <input type="text" id="psw" class="form-control" placeholder="请输入密码">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="rpsw" class="use3 control-label">确认密码</label>
+                        <div class=" use9">
+                            <input type="text" id="rpsw" class="form-control" placeholder="确认密码">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="email" class="use3 control-label">邮箱</label>
+                        <div class=" use9">
+                            <input type="text" id="email" class="form-control" placeholder="请输入邮箱">
+                        </div>
+                    </div>
+                    <div class="submit form-control form-danger">注册</div>
+                </form>
+                <div class="text-right right-bot">
+
+                    <span><a href="###">注册新用户</a></span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class=" min container">
+            <div class="text-center container">
+                <ul class="list-unstyled list-inline">
+                    <li><a href="###">公司简介</a></li>
+                    <li><a href="###">招贤纳士</a></li>
+                    <li><a href="###">广告服务</a></li>
+                    <li><a href="###">联系方式</a></li>
+                    <li><a href="###">版权声明</a></li>
+                    <li><a href="###">法律顾问</a></li>
+                    <li><a href="###">问题报告</a></li>
+                    <li><a href="###">合作伙伴</a></li>
+                    <li><a href="###">论坛反馈</a></li>
+                </ul>
+            </div>
+            <div class="text-center fbottom">
+                <p>Design by DanceSmile 蜀ICP备11005473号-1</p>
+            </div>
+        </div>
+    </footer>
+    <script>
+        $(function () {
+            function test() {
+                if ($(".logint").hasClass("active")) {
+                    $(".login").css("display", "block")
+                    $(".zhuce").css("display", "none")
+                    $(".contai").css({
+                        "height": "30%",
+                        "min-height": "280px"
+                    })
+                } else {
+                    $(".zhuce").css({
+                        "display": "block"
+                    })
+                    $(".contai").css({
+                        "height": "38%",
+                        "min-height": "380px"
+                    })
+                    $(".login").css("display", "none")
+                }
+            }
+            if (localStorage.getItem("index") == 0) {
+                $(".logtop div").eq(0).addClass("active")
+                $(".logtop div").eq(1).removeClass("active")
+            } else {
+                $(".logtop div").eq(1).addClass("active")
+                $(".logtop div").eq(0).removeClass("active")
+            }
+            test()
+            $(".logtop").on("click", "div", function () {
+                $(this).addClass("active")
+                $(this).siblings().removeClass("active")
+                test()
+                console.log($(".logint").hasClass("active"))
+            })
+        })
+    </script>
+</body>
+
+</html>

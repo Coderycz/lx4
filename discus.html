@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="bootstrap/bootstrap.min.css">
+    <script src="bootstrap/jquery-1.7.2.js"></script>
+    <script src="bootstrap/bootstrap.js"></script>
+    
+    <link rel="stylesheet" href="css/same.css">
+    <link rel="stylesheet" href="css/discus.css">
+    <script src="js/vue.js"></script>
+    <script src="js/discus.js"></script>
+    <script src="js/home.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="min container">
+            <div class="logo"><img src="img/logo.jpg" height="50px" alt=""></div>
+            <div class="login1 text-center ">
+                <span><a href="login.html">登录</a></span>
+                <span><a href="login.html">注册</a></span>
+            </div>
+            <div class="wraplogin">
+                <div class="persontop">
+                    <span class="use-name"></span>
+                    <span class="caret"></span>
+                </div>
+                <ul class="sonmenu list-unstyled text-center bg-success">
+                    <li><a href="#">活动</a></li>
+                    <li><a href="#">换肤</a></li>
+                    <li><a href="#">设置</a></li>
+                    <li><a class="exit" href="#">退出</a></li>
+                </ul>
+            </div>
+        </div>
+        
+
+    </header>
+    <section>
+        <div class="artic">
+            <h1 class="h3">使用CSS3制作文字、图片倒影</h1>
+            <div class="achor">
+                <p>作者：杨朝政</p>
+                <p>日期：2017年9月28日</p>
+            </div>
+            <div class="content">
+                <p class="title">文字的特效</p>
+                <p>CSS3制作文字、图片倒影需要涉及到使用CSS3.0新属性之box-reflect。</p>
+                <p>box-reflect属性目前仅在Chrome、Safari和Opera浏览器下支持，但这并不影响我们来学习这个属性的应用。</p>
+                <p>(完)</p>
+            </div>
+        </div>
+        <div class="discus">
+            <div class=""></div>
+            <div class="input">
+                <div class="textarea">
+                    <textarea name="" placeholder="来说两句吧" id="usein" v-model="usein" cols="30" rows="4" style="resize:none;"></textarea>
+                </div>
+                <div class="submit">
+                    <button class="btn btn-primary" @click=show>畅言一下</button>
+                </div>
+            </div>
+            <div class="midmesage" v-cloak>
+                <div class="activelist">评论</div>
+                <div class="line"></div>
+                <div class="num">
+                    <div class="read"><span>{{mydate.length}}</span>人阅读</div>
+                    <div class="dis"><span>{{mydate.length}}</span>人评论</div>
+                </div>
+            </div>
+            <div class="new" v-cloak v-show="mydate.length !=0">最新评论</div>
+            <div class="nodis" v-show="mydate.length ==0">暂无评论...</div>
+            <div class="output" v-for="item in mydate" v-cloak>
+                <div class="left-head">
+                    <a href=""> <img src="img/head.jpg" alt="" width="42px" height="42px"></a>
+                </div>
+                <div class="right-dis">
+                    <div class="rd-t">
+                        <a class="name" href="">{{item.usename}}</a>
+                        <span class="time">{{item.time}}</span>
+                    </div>
+                    <div class="content">{{item.usein}}</div>
+                    <!-- 如果是回复的则在下面显示被回复的人的信息 -->
+                    <div class="repperson" v-if="item.isrep">
+                        <div class="rd-t">
+                            <a class="name" href="">{{item.repuse}}</a>
+                            <span class="time">{{item.reptime}}</span>
+                        </div>
+                        <div class="content">{{item.repdate}}</div>
+                        <!-- <div class="icons">
+                        <span class="report"><i></i><a href="">举报</a></span>
+                        <span class="reply2" @click=replyshow($index)><i></i>回复                       
+                        </span>
+                        <span class="up"><i></i><a href="">(0)</a></span>
+                        <span class="down"><i></i><a href="">(0)</a></span>
+                    </div>
+                    <div class="clearfix"></div>
+                    <div class="reuse input" v-cloak>
+                        <div class="textarea">
+                            <textarea name="" placeholder="来说两句吧"  v-model="repdate" cols="30" rows="4" style="resize:none;"></textarea>
+                        </div>
+                        <div class="submit">
+                            <button class="btn btn-primary" @click=rep($index)>回复</button>
+                        </div>
+                    </div> -->
+                    </div>
+
+                    <div class="icons">
+                        <span class="report"><i></i><a href="">举报</a></span>
+                        <span class="reply1" @click=replyshow($index)><i></i>回复                       
+                    </span>
+                        <span class="up"><i></i><a href="">(0)</a></span>
+                        <span class="down"><i></i><a href="">(0)</a></span>
+                    </div>
+                    <div class="clearfix"></div>
+                    <div class="reuse input" v-cloak>
+                        <div class="textarea">
+                            <textarea name="" placeholder="来说两句吧" v-model="repdate" cols="30" rows="4" style="resize:none;"></textarea>
+                        </div>
+                        <div class="submit">
+                            <button class="btn btn-primary" @click=rep($index)>回复</button>
+                        </div>
+                    </div>
+                    <!-- <div class="reuse input">
+                    <div class="textarea">
+                        <textarea name="" placeholder="来说两句吧"  v-model="repdate" cols="30" rows="4" style="resize:none;"></textarea>
+                    </div>
+                    <div class="submit">
+                        <button class="btn btn-primary" @click=rep($index)>回复</button>
+                    </div>
+                </div> -->
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <footer>
+        <div class=" min container">
+            <div class="text-center container">
+
+                <ul class="list-unstyled list-inline">
+                    <li><a href="###">公司简介</a></li>
+                    <li><a href="###">招贤纳士</a></li>
+                    <li><a href="###">广告服务</a></li>
+                    <li><a href="###">联系方式</a></li>
+                    <li><a href="###">版权声明</a></li>
+                    <li><a href="###">法律顾问</a></li>
+                    <li><a href="###">问题报告</a></li>
+                    <li><a href="###">合作伙伴</a></li>
+                    <li><a href="###">论坛反馈</a></li>
+                </ul>
+            </div>
+            <div class="text-center fbottom">
+                <p>Design by DanceSmile 蜀ICP备11005473号-1</p>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+</body>
+
+</html>

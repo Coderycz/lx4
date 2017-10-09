@@ -1,0 +1,79 @@
+body{
+    height:100vh;
+    min-width:1000px;
+}
+.flex{
+    
+
+}
+.contai{
+    margin:auto;
+    position: absolute;
+    left:0;
+    top:0;
+    bottom:0;
+    right:0;
+    padding:0;
+    width:30%;
+    min-width:380px;
+    height:38%;
+    min-height:350px;
+    border:1px solid gray;
+    background: #fff;
+    font-size:14px;
+}
+footer{
+    position:absolute;
+    bottom:0
+}
+.active{
+    background: green
+}
+.logtop{
+    margin:0;
+    padding:0;
+    width:100%;
+    box-sizing:border-box;
+    border-bottom:1px solid gray;
+}
+.logtop div{
+    margin:0;
+    display:inline-block;
+    height:30px;
+    box-sizing:border-box;
+    line-height:30px;
+    font-size:16px;
+}
+.logtop div:nth-child(1){
+    border-right:1px solid gray;
+}
+.login{
+    margin:50px 10px 10px 10px;  
+    display:none;
+}
+.zhuce{
+    margin:50px 10px 10px 10px;  
+}
+.use3{
+    width:25%;
+    text-align:right;
+    margin-right:15px;
+    display:inline-block;
+}
+.use9{
+    width:60%;
+    display:inline-block;
+
+}
+.submit{
+    width:40%;
+    margin:0 auto;
+    text-align:center
+}
+.submit{
+    cursor: pointer;
+}
+.right-bot{
+    margin:15px 0 0 0;
+}
+

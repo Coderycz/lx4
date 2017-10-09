@@ -1,0 +1,64 @@
+body{
+    font-size: 12px;
+    font-family: 'Microsoft Yahei';
+    background: #f5e5c1 url(http://cs.itbyc.com/bgimg_top%5B1%5D.jpg) 50% top scroll no-repeat;
+    background-size: 100%;
+    color: #272a30;
+}
+header,footer{ 
+    width:100%;
+    position:relative;
+    z-index:999
+}
+.logo{
+    float: left;
+}
+.login1{
+
+    float: right;
+    height:50px;
+    line-height:50px;
+    font-size:16px;
+}
+.login1 a{
+    padding-left:20px;
+    height: 50px;
+}
+.persontop{
+    text-align: center;
+    width:120px;
+    height:50px;
+    line-height:50px;
+    font-size:16px;
+    background: rgba(255,255,255,.4) 
+}
+.wraplogin{
+    float: right;
+    display:inline-block;
+    position: relative
+}
+.sonmenu{
+    background: #d9edf7;
+    position: absolute;
+    z-index:1000;
+    top: 50px;
+    right: 0;
+    width: 120px;
+    display:none;
+    font-size: 16px;   
+}
+.sonmenu a{
+    display: inline-block;
+    color: #777;
+    width: 120px;
+
+}.sonmenu a:hover{
+    background: #fff;
+}
+footer{
+    margin-top:10px;
+    background: rgba(255,255,255,.5)
+}
+footer ul {
+    margin:10px
+}

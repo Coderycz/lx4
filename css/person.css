@@ -1,0 +1,184 @@
+body {
+    height: 2000px;
+    min-width:600px;
+}
+
+#home {
+    width: 100%;
+    //border: 1px solid red;
+    background-size: contain;
+    background: url(../img/test1.jpg) no-repeat center center;
+    background-attachment: fixed;
+}
+
+
+
+.margin-top {
+    padding: 100px 0;
+    background: rgba(0, 0, 0, .5)
+}
+
+.min .asidet img {
+    display: inline-block;
+    border: 5px solid #00adad;
+    border-radius: 50%;
+}
+
+.min .asidet h2 {
+    margin-top: 30px;
+    color: #00adad;
+}
+
+.asidet .btn-default {
+    margin-top: 20px;
+    background: transparent;
+    color: white;
+}
+.min a{
+    display:inline-block;
+    transition: all 0.3s;
+}
+a:hover{
+    color: #428bca;
+    text-decoration: none;
+    
+}
+.min .mid a i {  
+    font-size: 45px;
+    color: white;
+}
+.min .mid a i:hover{
+    color: #00adad;
+}
+
+
+#about-sec{
+    padding-top: 30px;
+}
+.con-about{
+    margin: 80px auto;
+}
+.leftsec h1{
+    margin-top: 20px;
+}
+.leftsec .content a{
+    display: inline-block;
+}
+.leftsec i{
+    font-size: 60px;
+}
+.rightsec h3{
+    font-size: 16px;
+    line-height: 30px
+}
+
+#skill-sec{
+    width: 100%;
+    
+    //border: 1px solid red;
+    background-size: contain;
+    background: url(../img/test2.jpg) no-repeat center center;
+    background-attachment: fixed;
+}
+#skill-sec .margin-top{
+    background: url(../img/repeat.png) , rgba(0,0,0,0.3)
+}
+.skill-con .skill-right h1{
+    color: white;
+}
+.canvas div{
+    display: inline-block;
+    margin-top: 20px;
+    width: 120px;
+    height: 120px;
+    background: white;
+}
+.canvas h3{
+    color: #00adad;
+
+}
+#down-sec {
+    padding: 80px 0
+}
+#down-sec .downright i{
+
+    font-size: 60px;
+    color: #00adad;
+}
+.downright span{
+    display: block
+}
+.downright .downicon{
+    margin-top: 10px;
+    height: 100px;
+    border-bottom: 1px solid #00adad;
+}
+
+.downbottom{
+    margin-top:30px;
+}
+.downbottom .downcont div{
+    padding:10px;
+    background: #00adad;
+    border-radius: 20px;
+    margin:10px
+}
+
+#saying-sec{
+    width: 100%;
+    //border: 1px solid red;
+    background-size: contain;
+    font-size: 40px;
+    background: url(../img/test3.jpg) no-repeat center center;
+    background-attachment: fixed;
+}
+.show-top{
+    margin: 80px auto;
+}
+#saying-sec {
+    color:#00adad
+}
+#saying-sec .show-title h1{
+    color: white;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#show-sec .show-img .toup{
+    margin:10px 0; 
+    position: relative;
+}
+.show-bg{
+    display: none;
+    position: absolute;
+    //left: 10px;
+    padding: 0 0;
+    z-index: 10;
+    height: 100%;
+    background: rgba(255,255,255,.6);
+    //background: gray
+}
+.toup a{   
+    padding:20px;   
+    display:inline-block;
+    color:  #00adad;  
+}
+.toup span{
+    
+   display:none;
+    width: 100%;
+    height: 100%;
+   
+}
+.toup:hover .show-bg{
+    display: block;
+}
+.toup a h3{
+    margin: 0 auto 20px;
+    font-size: 25px;
+}
+.toup p{
+    font-size: 20px;
+
+}
+
