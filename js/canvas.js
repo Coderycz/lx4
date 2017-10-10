@@ -1,4 +1,5 @@
 $(function () {
+    /*  用canvas生成会动的背景图 */
     console.log($(window).height())
     var can = document.getElementById("canvas");
     var ctx = can.getContext('2d');

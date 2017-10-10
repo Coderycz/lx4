@@ -1,7 +1,7 @@
 $(function(){
     //localStorage.clear();
  
-    /* 登录事件 */
+    /* 登录事件  用户名密码在data.js中*/
     $(".login .submit").click(function(){      
         var name = $(".login input:text").val()
         var psw = $(".login input:password").val()
